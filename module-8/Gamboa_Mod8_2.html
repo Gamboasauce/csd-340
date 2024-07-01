@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Gamboa_Mod8_2.css">
+    <style>
+        /* Additional style for table */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Style for space between cards */
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Assignment 8.2: Build a Web Page - Part 6</h1>
+    </header>
+
+    <div id="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="container">
+        <!-- New Card for Favorite Movies -->
+        <div class="card">
+            <div class="card-title">Top 5 Favorite Movies</div>
+            <div class="card-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Movie Name</th>
+                            <th>Two Characters</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The Dark Knight</td>
+                            <td>
+                                <ul>
+                                    <li>Batman</li>
+                                    <li>Joker</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fury</td>
+                            <td>
+                                <ul>
+                                    <li>Wardaddy</li>
+                                    <li>Bible</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Inside Out</td>
+                            <td>
+                                <ul>
+                                    <li>Joy</li>
+                                    <li>Sadness</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bad Boys 2</td>
+                            <td>
+                                <ul>
+                                    <li>Mike Lowrey</li>
+                                    <li>Marcus Burnett</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2 Fast 2 Furious</td>
+                            <td>
+                                <ul>
+                                    <li>Brian O'Conner</li>
+                                    <li>Dominic Toretto</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Existing Card -->
+        <div class="card">
+            <div class="card-title">Top 5 Favorite Foods</div>
+            <div class="card-content">
+                <ol>
+                    <li><a href="https://www.gimmesomeoven.com/fried-rice-recipe/" target="_blank">Fried Rice</a></li>
+                    <li><a href="https://www.gimmesomeoven.com/skinny-orange-chicken-recipe/" target="_blank">Orange Chicken</a></li>
+                    <li><a href="https://www.gimmesomeoven.com/baked-panko-crusted-chicken-tenders-with-honey-bbq-dipping-sauce/" target="_blank">Breaded Chicken Tenders</a></li>
+                    <li><a href="https://www.gimmesomeoven.com/grilled-chicken-kabobs/" target="_blank">Chicken Kabobs</a></li>
+                    <li><a href="https://www.gimmesomeoven.com/baked-chicken-breast/" target="_blank">Baked Chicken Breast</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Space between the two cards -->
+    <div style="margin-bottom: 20px;"></div>
+
+    <footer>
+	    <p class="footer-left">&copy; 2024 - Gamboa</p>
+        <p><a href="https://gamboasauce.github.io/csd-340/">Back to portal page</a></p>
+    </footer>
+</body>
+</html>
