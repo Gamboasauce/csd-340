@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="Assignment for section 9.3">
+    <meta name="keywords" content="css, html, javascript, bellevue">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="author" content="Matthew Gamboa">
+    <link rel="stylesheet" href="Gamboa_Mod9_3.css" type="text/css">
+    <script>
+        var firstVariableValue = "brothers";
+        var secondVariableValue = "world";
+        var thirdVariableValue = "familia";
+        var fourthVariableValue = "brother";
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <p>Dialogue from Fast & Furious 7</p>
+        <p>Dom: I used to say I live my life a quarter mile at a time and I think that's why we were <span id="brothers">_________</span> - because you did, too.</p>
+		<p>Dom: No matter where you are, whether it's a quarter mile away or halfway across the <span id="world">_________</span>. The most important thing in life, will always be the people in this room. Salute mi <span id="familia">_________</span>.</p>
+		<p>Dom: You'll always be with me... And you'll always be my <span id="brother">_________</span>.</p>
+        
+        <button type="button" onclick="document.getElementById('brothers').innerHTML = firstVariableValue">brothers</button>
+        <button type="button" onclick="document.getElementById('world').innerHTML = secondVariableValue">world</button>
+        <button type="button" onclick="document.getElementById('familia').innerHTML = thirdVariableValue">familia</button>
+        <button type="button" onclick="document.getElementById('brother').innerHTML = fourthVariableValue">brother</button>
+    </div>
+</body>
+</html>
