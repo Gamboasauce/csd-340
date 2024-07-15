@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        .image-container {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+        }
+        .description {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function changeImage(imageId, newSrc) {
+            document.getElementById(imageId).src = newSrc;
+        }
+        
+        function handleClick(imageId) {
+            let message = "";
+            if (imageId === "image1") {
+                message = "Yeah, you thought LOL!";
+            } else if (imageId === "image2") {
+                message = "My HAPPY Place!";
+            }
+            alert(message);
+        }
+    </script>
+</head>
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <div class="image-container">
+        <img id="image1" src="money.jpg" 
+             onmouseover="changeImage('image1', 'sad face.jpg')" 
+             onmouseout="changeImage('image1', 'money.jpg')" 
+             onclick="handleClick('image1')">
+        <div class="description">Lucky or Not? Hover Over...</div>
+    </div>
+    
+    <div class="image-container">
+        <img id="image2" src="new zeland.webp" 
+             onmouseover="changeImage('image2', 'excited.jpg')" 
+             onmouseout="changeImage('image2', 'new zeland.webp')" 
+             onclick="handleClick('image2')">
+        <div class="description">How this place makes me feel...</div>
+    </div>
+
+</body>
+</html>
