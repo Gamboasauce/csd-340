@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="author" content="Matthew Gamboa">
+    <meta name="description" content="Module 12.2 Assignment">
+    <meta name="keywords" content="HTML, CSS, web development">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Gamboa_Mod12_2.css" type="text/css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1> 
+        <div class="content">
+            <div class="left-div">
+                <h3>Top 10 Favorite Books</h3>
+                <button onclick="displayBooks('asc')">Top to Bottom</button>
+                <button onclick="displayBooks('desc')">Bottom to Top</button>
+                <hr style="border-top: 3px solid #000;">
+                <ol id="book-list">
+                    <li>Fahrenheit 451</li>
+                    <li>Holes</li>
+                    <li>Twilight</li>
+                    <li>Harry Potter</li>
+                    <li>The Hunger Games</li>
+                    <li>1984</li>
+                    <li>The Giver</li>
+                    <li>Game of Thrones</li>
+                    <li>To Kill a Mockingbird</li>
+                    <li>The Cat in The Hat</li>
+                </ol>
+            </div>
+            <div class="right-div">
+                <h3 class="dashed-border"> 5 Things I've Learned Since the Course Started</h3>
+                <ol class="roman-list">
+                    <li>What HTML really is</li>
+                    <li>How Webpages are made up</li>
+                    <li>How two different files work together</li>
+                    <li>To make sure to be very precise and correct</li>
+                    <li>Learning the functions of each command</li>
+                </ol>
+            </div>
+            <div class="bottom-div">
+                <a href="https://gamboasauce.github.io/csd-340/">Portal Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const books = [
+            'Fahrenheit 451',
+            'Holes',
+            'Twilight',
+            'Harry Potter',
+            'The Hunger Games',
+            '1984',
+            'The Giver',
+            'Game of Thrones',
+            'To Kill a Mockingbird',
+            'The Cat in The Hat'
+        ];
+
+        function displayBooks(order) {
+            let sortedBooks;
+            if (order === 'asc') {
+                sortedBooks = books.slice();
+            } else if (order === 'desc') {
+                sortedBooks = books.slice().reverse();
+            }
+
+            const bookList = document.getElementById('book-list');
+            bookList.innerHTML = '';
+            sortedBooks.forEach((book, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = book;
+                bookList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>
